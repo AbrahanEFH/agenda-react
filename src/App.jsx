@@ -1,8 +1,13 @@
 function App() {
+
+  const edad = 18
     return (
-      <div className="App">
-      <h1>Hola mundo</h1>
-    </div>
+      <>
+      {edad >= 18 ? 'Eres mayor de edad' : 'No eres mayor'}
+       <div>
+         <h1>{'Hola mundo'.toUpperCase()}</h1>
+       </div>
+      </>
     )
 }
 
