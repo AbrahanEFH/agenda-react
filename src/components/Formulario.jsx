@@ -10,15 +10,39 @@ const Formulario = () => {
         </p>
 
         <form className="bg-white shadow-md rounded-lg py-10 px-5">
-            <div>
+            <div className=" mb-5" >
                 <label htmlFor="cliente" className=" block text-gray-700 uppercase">
-                    Nombre Clientes
+                    Nombre Cliente
                 </label>
 
                 <input
                     id="cliente"
                     type="text" 
                     placeholder="Nombre Cliente"
+                    className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+                />
+            </div>
+            <div className="mb-5">
+                <label htmlFor="apellido" className=" block text-gray-700 uppercase">
+                    Apellido cliente
+                </label>
+
+                <input
+                    id="apellido"
+                    type="text" 
+                    placeholder="Apellido Cliente"
+                    className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+                />
+            </div>
+            <div>
+                <label htmlFor="email" className=" block text-gray-700 uppercase">
+                    Email
+                </label>
+
+                <input
+                    id="email"
+                    type="text" 
+                    placeholder="Email"
                     className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
                 />
             </div>
