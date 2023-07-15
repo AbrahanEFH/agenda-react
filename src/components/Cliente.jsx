@@ -1,7 +1,7 @@
 
 const Cliente = () => {
   return (
-     <div className=" m-5 bg-white shadow-md px-5 py-5 rounded-xl">
+     <div className=" my-8 mx-5 bg-white shadow-md px-5 py-5 rounded-xl">
         <p className=" font-bold mb-3 text-gray-700 uppercase"> Nombre: {''}
             <span className=" font-normal normal-case">Cliente</span>
 

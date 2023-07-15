@@ -3,6 +3,11 @@ import {useState, useEffect } from 'react';
 const Formulario = () => {
     //Primer State
     const [nombre, setNombre] = useState(''); // valor inicial
+    const [apellido, setApellido] = useState(''); 
+    const [email, setEmail] = useState(''); // valor inicial
+    const [cita, setCita] = useState(''); // valor inicial
+    const [servicio, setServicio] = useState(''); 
+
 
     // Funcion para enviar el formulario
 
@@ -15,7 +20,7 @@ const Formulario = () => {
    
 
   return (
-    <div className="md:w-1/2 lg:w-2/5 " >
+    <div className="md:w-1/2 lg:w-2/5 mx-5" >
         <h2 className="font-black text-3xl text-center" >Seguimiento Clientes</h2>
 
         <p className="text-lg mt-5 text-center mb-10">
@@ -51,6 +56,8 @@ const Formulario = () => {
                     type="text" 
                     placeholder="Apellido Cliente"
                     className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+                    value={apellido}
+                    onChange={ (e) => setApellido(e.target.value)}
                 />
             </div>
             <div className="mb-5">
@@ -63,6 +70,8 @@ const Formulario = () => {
                     type="email" 
                     placeholder="Email Contacto"
                     className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+                    value={email}
+                    onChange={ (e) => setEmail(e.target.value)}
                 />
             </div>
             <div className="mb-5">
@@ -74,6 +83,8 @@ const Formulario = () => {
                     id="cita"
                     type="date" 
                     className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+                    value={cita}
+                    onChange={ (e) => setCita(e.target.value)}
                 />
             </div>
             <div>
@@ -84,6 +95,8 @@ const Formulario = () => {
                     id="servicio"
                     className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
                     placeholder="Describe lo que necesitas"
+                    value={servicio}
+                    onChange={ (e) => setServicio(e.target.value)}
                 />
             </div>
             <input type="submit" 
