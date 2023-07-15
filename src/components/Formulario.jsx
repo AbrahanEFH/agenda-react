@@ -1,7 +1,16 @@
 import {useState, useEffect } from 'react';
 
 const Formulario = () => {
+    //Primer State
     const [nombre, setNombre] = useState(''); // valor inicial
+
+    // Funcion para enviar el formulario
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        console.log('Enviando formulario')
+    }
 
    
 
@@ -14,7 +23,9 @@ const Formulario = () => {
             <span className=" text-indigo-400 font-bold" >Administralos</span>
         </p>
 
-        <form className="bg-white shadow-md rounded-lg py-10 px-5 mb-10">
+        <form 
+            onSubmit={handleSubmit}
+            className="bg-white shadow-md rounded-lg py-10 px-5 mb-10">
             <div className=" mb-5" >
                 <label htmlFor="cliente" className=" block text-gray-700 uppercase font-bold">
                     Nombre Cliente
@@ -25,6 +36,9 @@ const Formulario = () => {
                     type="text" 
                     placeholder="Nombre Cliente"
                     className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+                    // Utilizamos el hook y la funcion Modificadora [nombre, setNombre]
+                    value={nombre}
+                    onChange={ (e) => setNombre(e.target.value)}
                 />
             </div>
             <div className="mb-5">
