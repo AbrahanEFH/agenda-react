@@ -8,13 +8,23 @@ const Formulario = () => {
     const [cita, setCita] = useState(''); // valor inicial
     const [servicio, setServicio] = useState(''); 
 
+    const [error, setError] = useState(false)
+
 
     // Funcion para enviar el formulario
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        console.log('Enviando formulario')
+        // Validacion del formulario
+        if([ nombre, apellido, email, cita, servicio].includes('') ){
+            console.log('Hay almenos un campo vacio')
+            setError(true)
+            return;
+        }
+
+        setError(false)
+
     }
 
    
@@ -31,6 +41,12 @@ const Formulario = () => {
         <form 
             onSubmit={handleSubmit}
             className="bg-white shadow-md rounded-lg py-10 px-5 mb-10">
+
+                {error && (
+                    <div className=' bg-red-800 text-white text-center font-bold rounded p-2 mb-3 uppercase'>
+                        <p>Todos los campos son obligatorios</p>
+                    </div>
+                )}
             <div className=" mb-5" >
                 <label htmlFor="cliente" className=" block text-gray-700 uppercase font-bold">
                     Nombre Cliente
