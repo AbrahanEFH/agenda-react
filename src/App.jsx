@@ -6,16 +6,18 @@ import Header from "./components/header"
 
 function App() {
 
-    const [pacientes, SetPacientes] = useState([]);
+    const [clientes, setClientes] = useState([]);
+
  
     return (
       <div className="container mx-auto mt-20">
-        <Header 
-          numeros={ 1 }
-        />
+        <Header />
 
         <div className="mt-12 md:flex " >
-            <Formulario />
+            <Formulario 
+                clientes={clientes}
+                setClientes={setClientes}
+            />
             <ListadoClientes />
         </div>
       </div>

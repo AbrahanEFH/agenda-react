@@ -1,6 +1,6 @@
 import {useState, useEffect } from 'react';
 
-const Formulario = () => {
+const Formulario = ({ clientes, setClientes }) => {
     //Primer State
     const [nombre, setNombre] = useState(''); // valor inicial
     const [apellido, setApellido] = useState(''); 
@@ -25,6 +25,17 @@ const Formulario = () => {
 
         setError(false)
 
+        //Objeto de cliente
+        const objetoClientes = {
+            nombre,
+            apellido,
+            email,
+            cita,
+            servicio
+        }
+
+        //console.log(objetoClientes)
+        setClientes([...clientes, objetoClientes])
     }
 
    
