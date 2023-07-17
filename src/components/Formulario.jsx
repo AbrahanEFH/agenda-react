@@ -36,6 +36,13 @@ const Formulario = ({ clientes, setClientes }) => {
 
         //console.log(objetoClientes)
         setClientes([...clientes, objetoClientes])
+
+        // Reiniciar el formulario
+        setNombre('')
+        setApellido('')
+        setEmail('')
+        setCita('')
+        setServicio('')
     }
 
    
