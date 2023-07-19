@@ -1,4 +1,5 @@
 import {useState, useEffect } from 'react';
+import Error from './Error';
 
 const Formulario = ({ clientes, setClientes }) => {
     //Primer State
@@ -60,7 +61,7 @@ const Formulario = ({ clientes, setClientes }) => {
             onSubmit={handleSubmit}
             className="bg-white shadow-md rounded-lg py-10 px-5 mb-10">
 
-                {error && }
+                {error && <Error mensaje= 'Todos los campos son obligatorios' />}
             <div className=" mb-5" >
                 <label htmlFor="cliente" className=" block text-gray-700 uppercase font-bold">
                     Nombre Cliente
