@@ -14,6 +14,7 @@ const ListadoClientes = ({clientes}) => {
 
           { clientes.map( (cliente) => (
                <Cliente
+                    //key={}
                     cliente={cliente}
                />
                   
