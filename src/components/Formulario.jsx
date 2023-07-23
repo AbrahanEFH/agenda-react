@@ -11,6 +11,13 @@ const Formulario = ({ clientes, setClientes }) => {
 
     const [error, setError] = useState(false)
 
+    const generarId = () => {
+        const random = Math.random().toString(36).substring(2)
+        const fecha = Date.now().toString(36)
+
+        return random + fecha
+    }
+
 
     // Funcion para enviar el formulario
 
@@ -32,7 +39,8 @@ const Formulario = ({ clientes, setClientes }) => {
             apellido,
             email,
             cita,
-            servicio
+            servicio,
+            id: generarId()
         }
 
         //console.log(objetoClientes)
