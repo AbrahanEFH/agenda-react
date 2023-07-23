@@ -23,8 +23,17 @@ const Cliente = ({cliente}) => {
         </p>
         <p className=" font-bold mb-3 text-gray-700 uppercase"> Servicio: {''}
             <span className=" font-normal normal-case">{servicio}</span>
-
         </p>
+
+        <div>
+            <button type="button" 
+                    className="py-2 px-10 bg-indigo-400 hover:bg-indigo-600 text-white font-bold uppercase rounded-lg"
+            > Editar</button>
+
+                <button type="button" 
+                    className="py-2 px-10 bg-indigo-400 hover:bg-indigo-600 text-white font-bold uppercase rounded-lg"
+                > Eliminar</button>   
+        </div>
     </div>
   )
 }
