@@ -1,6 +1,7 @@
 import Cliente from "./Cliente"
 
 const ListadoClientes = ({clientes}) => {
+  console.log(clientes)
 
   
   return (

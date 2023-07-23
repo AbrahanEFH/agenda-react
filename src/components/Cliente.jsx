@@ -1,5 +1,6 @@
 
-const Cliente = () => {
+const Cliente = ({cliente}) => {
+    console.log(cliente)
   return (
      <div className=" my-8 mx-5 bg-white shadow-md px-5 py-5 rounded-xl">
         <p className=" font-bold mb-3 text-gray-700 uppercase"> Nombre: {''}
