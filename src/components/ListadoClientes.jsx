@@ -1,6 +1,6 @@
 import Cliente from "./Cliente"
 
-const ListadoClientes = ({clientes}) => {
+const ListadoClientes = ({clientes, setCliente}) => {
 
   
   return (
@@ -18,6 +18,7 @@ const ListadoClientes = ({clientes}) => {
                <Cliente
                     key={cliente.id}
                     cliente={cliente}
+                    setCliente={setCliente}
                />
                   
           ))}

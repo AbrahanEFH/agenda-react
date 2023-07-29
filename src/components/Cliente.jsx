@@ -1,5 +1,5 @@
 
-const Cliente = ({cliente}) => {
+const Cliente = ({cliente, setCliente}) => {
 
     const { nombre, apellido, email, cita, servicio } = cliente
 
@@ -28,6 +28,7 @@ const Cliente = ({cliente}) => {
         <div className="flex justify-between mt-5">
             <button type="button" 
                     className="py-2 px-10 bg-indigo-400 hover:bg-indigo-600 text-white font-bold uppercase rounded-lg"
+                    onClick={() => setCliente(cliente)}
             > Editar</button>
 
                 <button type="button" 

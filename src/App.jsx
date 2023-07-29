@@ -7,6 +7,7 @@ import Header from "./components/header"
 function App() {
 
     const [clientes, setClientes] = useState([]);
+    const [cliente, setCliente] = useState({});
 
  
     return (
@@ -20,6 +21,7 @@ function App() {
             />
             <ListadoClientes 
               clientes={clientes}
+              setCliente={setCliente}
             />
         </div>
       </div>
