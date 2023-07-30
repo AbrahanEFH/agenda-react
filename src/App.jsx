@@ -18,6 +18,7 @@ function App() {
             <Formulario 
                 clientes={clientes}
                 setClientes={setClientes}
+                cliente={cliente}
             />
             <ListadoClientes 
               clientes={clientes}

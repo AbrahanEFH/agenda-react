@@ -1,7 +1,7 @@
 import {useState, useEffect } from 'react';
 import Error from './Error';
 
-const Formulario = ({ clientes, setClientes }) => {
+const Formulario = ({ clientes, setClientes, cliente }) => {
     //Primer State
     const [nombre, setNombre] = useState(''); // valor inicial
     const [apellido, setApellido] = useState(''); 
@@ -10,6 +10,10 @@ const Formulario = ({ clientes, setClientes }) => {
     const [servicio, setServicio] = useState(''); 
 
     const [error, setError] = useState(false)
+
+    useEffect(() => {
+        
+    }, [cliente])
 
     const generarId = () => {
         const random = Math.random().toString(36).substring(2)
