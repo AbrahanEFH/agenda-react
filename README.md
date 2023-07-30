@@ -2,3 +2,5 @@
 
 ### React hooks y props actualizado
 * Componentes por separado
+
+### useEffect es un callback
