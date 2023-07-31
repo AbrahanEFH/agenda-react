@@ -3,13 +3,6 @@ import { useEffect } from "react"
 
 const ListadoClientes = ({clientes, setCliente }) => {
 
-       useEffect(() => {
-        if(clientes.length > 0){
-          console.log('Imprimiendo nuevo paciente')
-
-        }
-      }, [clientes])
-
   return (
     <div className="md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll " >
 
