@@ -1,5 +1,4 @@
 import Cliente from "./Cliente"
-import { useEffect } from "react"
 
 const ListadoClientes = ({clientes, setCliente }) => {
 
