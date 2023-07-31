@@ -14,9 +14,12 @@ const Formulario = ({ clientes, setClientes, cliente }) => {
     useEffect(() => {
         if(Object.keys(cliente).length > 0){
             setNombre(cliente.nombre)
-        } else {
-            console.log('No hay nada')
-        }
+            setApellido(cliente.apellido)
+            setEmail(cliente.email)
+            setCita(cliente.cita)
+            setServicio(cliente.servicio)
+
+        } 
     }, [cliente])
 
     const generarId = () => {
