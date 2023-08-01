@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Formulario from "./components/Formulario"
 import ListadoClientes from "./components/ListadoClientes"
 import Header from "./components/Header"
@@ -8,6 +8,10 @@ function App() {
 
     const [clientes, setClientes] = useState([]);
     const [cliente, setCliente] = useState({});
+
+    useEffect( () => {
+      localStorage.setItem('clientes', JSON.stringify(clientes))
+    }, [clientes])
 
     const eliminarCliente = (id) => {
         const clientesActualizados = clientes.filter( cliente => cliente.id !== id)
