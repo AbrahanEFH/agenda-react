@@ -54,8 +54,13 @@ const Formulario = ({ clientes, setClientes, cliente }) => {
             id: generarId()
         }
 
-        //console.log(objetoClientes)
-        setClientes([...clientes, objetoClientes])
+        if(cliente.id ) {
+            // Editando el Registro
+        } else {
+            // Nuevo Registro
+            objetoClientes.id = generarId()
+            setClientes([...clientes, objetoClientes])
+        }
 
         // Reiniciar el formulario
         setNombre('')
