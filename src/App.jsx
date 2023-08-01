@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Formulario from "./components/Formulario"
 import ListadoClientes from "./components/ListadoClientes"
-import Header from "./components/header"
+import Header from "./components/Header"
 
 
 function App() {

@@ -51,11 +51,15 @@ const Formulario = ({ clientes, setClientes, cliente }) => {
             email,
             cita,
             servicio,
-            id: generarId()
+            // id: generarId()
         }
 
         if(cliente.id ) {
             // Editando el Registro
+            objetoClientes.id = cliente.id
+            console.log(objetoClientes)
+
+            const clientesActualizados = clientes.map( clienteState )
         } else {
             // Nuevo Registro
             objetoClientes.id = generarId()
