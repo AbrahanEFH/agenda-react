@@ -151,7 +151,7 @@ const Formulario = ({ clientes, setClientes, cliente }) => {
             </div>
             <input type="submit" 
                     className="bg-indigo-400 w-full rounded p-3 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer"
-                    value="Solicitar Cita"
+                    value={ cliente.id ? 'Editar Cliente' : 'Agregar Cliente' }
             
             />
         </form>
