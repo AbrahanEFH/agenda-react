@@ -9,6 +9,18 @@ function App() {
     const [clientes, setClientes] = useState([]);
     const [cliente, setCliente] = useState({});
 
+    useEffect(() => {
+        const obtenerLS = () => {
+          const clientesLS = JSON.parse(localStorage.getItem('clientes')) ?? [];
+
+          setClientes(clientesLS)
+        }
+
+        obtenerLS()
+    }, [])
+
+
+      // Utilizamos el useEffect para agregar al localStorage
     useEffect( () => {
       localStorage.setItem('clientes', JSON.stringify(clientes))
     }, [clientes])
@@ -16,7 +28,7 @@ function App() {
     const eliminarCliente = (id) => {
         const clientesActualizados = clientes.filter( cliente => cliente.id !== id)
         setClientes(clientesActualizados)
-    }
+    } 
 
  
     return (
