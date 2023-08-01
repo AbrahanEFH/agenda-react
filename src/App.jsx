@@ -9,6 +9,11 @@ function App() {
     const [clientes, setClientes] = useState([]);
     const [cliente, setCliente] = useState({});
 
+    const eliminarCliente = (id) => {
+        const clientesActualizados = clientes.filter( cliente => cliente.id !== id)
+        setClientes(clientesActualizados)
+    }
+
  
     return (
       <div className="container mx-auto mt-20">
@@ -19,10 +24,12 @@ function App() {
                 clientes={clientes}
                 setClientes={setClientes}
                 cliente={cliente}
+                setCliente={setCliente}
             />
             <ListadoClientes 
               clientes={clientes}
               setCliente={setCliente}
+              eliminarCliente={eliminarCliente}
             />
         </div>
       </div>

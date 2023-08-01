@@ -1,6 +1,6 @@
 import Cliente from "./Cliente"
 
-const ListadoClientes = ({clientes, setCliente }) => {
+const ListadoClientes = ({clientes, setCliente, eliminarCliente }) => {
 
   return (
     <div className="md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll " >
@@ -18,6 +18,7 @@ const ListadoClientes = ({clientes, setCliente }) => {
                     key={cliente.id}
                     cliente={cliente}
                     setCliente={setCliente}
+                    eliminarCliente={eliminarCliente}
                />
                   
           ))}

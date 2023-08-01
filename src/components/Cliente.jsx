@@ -1,8 +1,16 @@
 import { useEffect } from "react"
 
-const Cliente = ({cliente, setCliente}) => {
+const Cliente = ({cliente, setCliente, eliminarCliente}) => {
 
-    const { nombre, apellido, email, cita, servicio } = cliente
+    const { nombre, apellido, email, cita, servicio, id } = cliente
+
+    const handleEliminar = () => {
+        const respuesta = confirm('¿Deseas eliminar este cliente?')
+
+        if(respuesta){
+            eliminarCliente(id)
+        }
+    }
 
   return (
      <div className=" my-8 mx-5 bg-white shadow-md px-5 py-5 rounded-xl">
@@ -34,6 +42,7 @@ const Cliente = ({cliente, setCliente}) => {
 
                 <button type="button" 
                     className="py-2 px-10 bg-red-600 hover:bg-red-700 text-white font-bold uppercase rounded-lg"
+                    onClick={handleEliminar}
                 > Eliminar</button>   
         </div>
     </div>

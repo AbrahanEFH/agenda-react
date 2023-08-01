@@ -1,7 +1,7 @@
 import {useState, useEffect } from 'react';
 import Error from './Error';
 
-const Formulario = ({ clientes, setClientes, cliente }) => {
+const Formulario = ({ clientes, setClientes, cliente, setCliente }) => {
     //Primer State
     const [nombre, setNombre] = useState(''); // valor inicial
     const [apellido, setApellido] = useState(''); 
@@ -59,7 +59,12 @@ const Formulario = ({ clientes, setClientes, cliente }) => {
             objetoClientes.id = cliente.id
             console.log(objetoClientes)
 
-            const clientesActualizados = clientes.map( clienteState )
+            const clientesActualizados = clientes.map( clienteState => clienteState.id === 
+                cliente.id ? objetoClientes : clienteState) 
+
+            setClientes(clientesActualizados)
+            setCliente({})
+
         } else {
             // Nuevo Registro
             objetoClientes.id = generarId()
